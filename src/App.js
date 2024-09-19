@@ -1,20 +1,26 @@
 import React from "react";
-import './App.css';
+import './App.css'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HomePage from "./HomePage";
 import ExamInfoPage from "./ExamInfoPage";
-import dummyData from "./dummyData"; // Import your dummy data
+import UserDetailPage from "./UserDetailsPage";
+import dummyData from "./dummyData"; // Make sure to import your dummy data
 
 const App = () => {
   return (
     <Router>
       <Routes>
+        {/* Home Page Route */}
         <Route path="/" element={<HomePage />} />
+
+        {/* Exam Info Page Route */}
         <Route
           path="/exam-details/:id"
           element={<ExamInfoPage exams={dummyData.exams} />}
         />
-        {/* Add routes for other pages here */}
+
+        {/* User Detail Page Route */}
+        <Route path="/user-detail" element={<UserDetailPage />} />
       </Routes>
     </Router>
   );

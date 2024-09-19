@@ -47,7 +47,7 @@ section {
 /* About Us styles */
 .about-us-container,
 .about-us {
-  background-color: #f5f5f5; /* Light gray background for consistency */
+  background-color: lightsteelblue; /* Light gray background for consistency */
   color: #343a40; /* Dark text color */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -78,3 +78,38 @@ section {
   text-decoration: underline;
 }
 
+.user-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.user-info-card {
+  border: 1px solid #007bff;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.card-header {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+h4 {
+  margin-top: 20px;
+  color: #007bff;
+}
+
+.list-group-item {
+  padding: 10px 20px;
+  border-color: #007bff;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
