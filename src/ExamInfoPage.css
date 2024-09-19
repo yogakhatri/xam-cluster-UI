@@ -1,0 +1,48 @@
+/* src/ExamInfoPage.css */
+
+.exam-info-container {
+  display: flex;
+  justify-content: center;
+}
+
+.exam-info {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+h5 {
+  border-bottom: 2px solid #007bff; /* Blue underline for section headers */
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.exam-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.exam-link:hover {
+  text-decoration: underline;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}

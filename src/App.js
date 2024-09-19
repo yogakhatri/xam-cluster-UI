@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./HomePage";
+import ExamInfoPage from "./ExamInfoPage";
+import dummyData from "./dummyData"; // Import your dummy data
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route
+          path="/exam-details/:id"
+          element={<ExamInfoPage exams={dummyData.exams} />}
+        />
+        {/* Add routes for other pages here */}
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
