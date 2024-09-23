@@ -5,10 +5,11 @@ import { useParams, Link } from "react-router-dom";
 import "./ExamInfoPage.css"; // Import the CSS file for custom styles
 import Header from "./Header";
 import AboutUs from "./AboutUs";
+import dummyData from "./dummyData";
 
-const ExamInfoPage = ({ exams }) => {
+const ExamInfoPage = () => {
   const { id } = useParams();
-  const exam = exams.find((e) => e.id === parseInt(id, 10));
+  const exam = dummyData.exams.find((e) => e.id === parseInt(id, 10)); // Find the exam by ID
 
   if (!exam) {
     return (

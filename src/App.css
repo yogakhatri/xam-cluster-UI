@@ -113,3 +113,81 @@ h4 {
   margin-bottom: 10px;
   border-radius: 4px;
 }
+
+.admin-exam-container {
+  padding: 20px;
+}
+
+.add-exam-button {
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.add-exam-button:hover {
+  background-color: #45a049;
+}
+
+.exam-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.exam-table th,
+.exam-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.exam-table th {
+  background-color: #f2f2f2;
+}
+
+.edit-button {
+  padding: 5px 10px;
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  background-color: #0b7dda;
+}
+
+.form-popup {
+  margin-top: 20px;
+}
+
+.exam-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.exam-form input,
+.exam-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0 10px 0;
+  box-sizing: border-box;
+}
+
+.exam-form button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.exam-form .cancel-button {
+  background-color: #f44336;
+}
+
+.exam-form button:hover {
+  opacity: 0.8;
+}

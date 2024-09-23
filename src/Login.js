@@ -1,26 +1,30 @@
 import React, { useState } from "react";
 import { Form, Button, Container, Row, Col } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 
-const SignUp = () => {
+const Login = ({ setAuth }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      await axios.post(
-        "http://localhost:5000/api/users/register", // Ensure correct API path
-        { email, password },
-        { withCredentials: true } // Allow cookies to be sent
-      );
 
-      navigate("/login"); // Redirect to login after successful registration
-    } catch (error) {
-      console.error("Signup error:", error);
-      // Optionally, add error handling UI
+    // Save email and password to localStorage
+    localStorage.setItem("email", email);
+    localStorage.setItem("password", password);
+
+    // Fake a role for this example
+    const role = email === "admin@example.com" ? "admin" : "user";
+
+    // Update auth state
+    setAuth({ isAuthenticated: true, role });
+
+    // Redirect based on role
+    if (role === "admin") {
+      navigate("/admin-page");
+    } else {
+      navigate("/user-detail");
     }
   };
 
@@ -30,7 +34,7 @@ const SignUp = () => {
       <Row>
         <Col>
           <div className="border p-5 rounded shadow-sm">
-            <h2 className="text-center mb-4">Register</h2>
+            <h2 className="text-center mb-4">Login</h2>
             <Form onSubmit={handleSubmit}>
               <Form.Group className="my-4" controlId="formBasicEmail">
                 <Form.Label>Email address</Form.Label>
@@ -55,7 +59,7 @@ const SignUp = () => {
               </Form.Group>
 
               <Button variant="primary" type="submit" className="w-100">
-                Register
+                Login
               </Button>
             </Form>
           </div>
@@ -65,4 +69,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;
